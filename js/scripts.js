@@ -36,5 +36,17 @@ skillItems.forEach((item) => {
     item.style.transform = "scale(1)";
   });
 });
-
+// Hamburger menu functionality
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });
+}
 document.getElementById("contactTitle").style.display = "none"; // Hide the Contact Me heading

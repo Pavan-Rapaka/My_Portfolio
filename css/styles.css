@@ -246,6 +246,28 @@ nav a {
   text-align: center;
 }
 
+#skills .skills-details {
+  margin-top: 2rem; /* Add some space between the skills list and details */
+  text-align: center; /* Align text to the center */
+}
+
+#skills .skills-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#skills .skills-details p {
+  margin-bottom: 0.25rem;
+}
+
+#skills .skills-details a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#skills .skills-details a:hover {
+  text-decoration: underline;
+}
 #skills .skills-list {
   list-style: none;
   padding: 5rem 0; /* Increased padding */
@@ -344,4 +366,49 @@ footer .social-links a:hover {
     margin-bottom: 1rem;
     margin-right: 0;
   }
+  /* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #f8f8f2;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+@media (max-width: 900px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -70vw;
+    width: 60vw;
+    height: 100vh;
+    background: #282a36;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 30px;
+    gap: 20px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: right 0.3s;
+  }
+  nav ul.open {
+    right: 0;
+  }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top:
 }
