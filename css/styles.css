@@ -1,0 +1,454 @@
+/* General Styles */
+body {
+  font-family: "Lucida Handwriting", cursive;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme changes */
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #282a36; /* Dracula background */
+  color: #f8f8f2; /* Dracula foreground */
+}
+
+/* Dark Theme Header Styles */
+.dark-theme header {
+  background-color: #282a36; /* Dracula background */
+  color: #f8f8f2; /* Dracula foreground */
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.dark-theme nav a {
+  color: #8be9fd; /* Dracula cyan */
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+.dark-theme nav a:hover {
+  background-color: #44475a; /* Dracula comment */
+  color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+.dark-theme nav a:focus {
+  outline: 2px solid #bd93f9; /* Dracula purple */
+  outline-offset: 2px;
+}
+
+/* Dark Theme Footer Styles */
+.dark-theme footer {
+  background-color: #282a36; /* Dracula background */
+  color: #f8f8f2; /* Dracula foreground */
+  padding: 1.5rem 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.dark-theme footer .social-links a {
+  color: #ff79c6; /* Dracula pink */
+  margin: 0 0.75rem;
+  font-size: 1.4rem;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.dark-theme footer .social-links a:hover {
+  color: #bd93f9; /* Dracula purple */
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Project Cards */
+.dark-theme .project-card {
+  background-color: #44475a; /* Dracula comment */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dark-theme .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Form */
+.dark-theme #contact .contact-form input,
+.dark-theme #contact .contact-form textarea {
+  background-color: #44475a; /* Dracula comment */
+  color: #f8f8f2; /* Dracula foreground */
+  border: 1px solid #6272a4; /* Dracula line */
+  border-radius: 5px;
+}
+
+.dark-theme #contact .contact-form button {
+  background-color: #bd93f9; /* Dracula purple */
+  color: #282a36; /* Dracula background */
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme #contact .contact-form button:hover {
+  background-color: #f8f8f2; /* Dracula foreground */
+  color: #282a36; /* Dracula background */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #282a36; /* Dracula background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6272a4; /* Dracula line */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8be9fd; /* Dracula cyan */
+}
+
+/* Header Styles */
+header {
+  padding: 0.5rem 0;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Hero Section Styles */
+#hero {
+  padding: 5rem 0;
+  text-align: center;
+  background-image: url("../images/homepgbg.jpg"); /* Add background image */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  color: #fff; /* Ensure text is visible on the background */
+}
+/*background: linear-gradient(135deg, #3498db, #2980b9);*/ /* Example gradient */
+
+.hero-content {
+  width: 80%;
+  margin: auto;
+}
+
+.cta-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+/* About Section Styles */
+#about {
+  padding: 2rem 0;
+  text-align: center;
+ 
+  background-size:100%;
+  background-position: center;
+}
+
+#about .about-content {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  color: white;
+}
+
+#about .about-content img {
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 2rem;
+  transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+#about .about-content img:hover {
+  transform: scale(1.1);
+}
+
+/* Projects Section Styles */
+#projects {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.project-card {
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.project-card .project-links a {
+  color: white; /* Or any color that provides good contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  padding: 5px 10px; /* Add some padding for better appearance */
+  border-radius: 5px; /* Optional: Round the corners */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Optional: Add a text shadow */
+  margin-right: 5px; /* Add spacing between the links */
+}
+
+#certifications {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* ...existing code... */
+.certifications-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.certificate-card {
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 16px;
+  width: 260px;
+  text-align: center;
+}
+.certificate-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.certificate-card h3 {
+  margin: 12px 0 8px 0;
+  font-size: 1.1em;
+}
+ /*.certificate-card .pdf-link {
+  display: inline-block;
+  margin-top: 6px;
+  color: #4fc3f7;
+  text-decoration: underline;
+  font-size: 0.95em;
+}*/
+/* ...existing code... */
+/* Skills Section Styles */
+#skills {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#skills .skills-details {
+  margin-top: 2rem; /* Add some space between the skills list and details */
+  text-align: center; /* Align text to the center */
+}
+
+#skills .skills-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#skills .skills-details p {
+  margin-bottom: 0.25rem;
+}
+
+#skills .skills-details a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#skills .skills-details a:hover {
+  text-decoration: underline;
+}
+#skills .skills-list {
+  list-style: none;
+  padding: 5rem 0; /* Increased padding */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+ 
+}
+
+#skills .skills-list li {
+  transition: transform 0.2s;
+  font-size: 1.2rem; /* Increased font size */
+  color: #fff; /* Light text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow */
+  margin: 0.5rem; /* Added margin */
+  padding: 0.5rem 1rem;
+}
+
+#skills .skills-list li:hover {
+  transform: scale(1.2);
+}
+
+/* Contact Section Styles */
+#contact {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+#contact .contact-form {
+  width: 80%;
+  margin: auto;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#contact .contact-form button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact .contact-form button:hover {
+  background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 0.5rem 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer .social-links a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #3498db;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #about .about-content {
+    flex-direction: column;
+  }
+
+  #about .about-content img {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+  /* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #f8f8f2;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+@media (max-width: 900px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -70vw;
+    width: 60vw;
+    height: 100vh;
+    background: #282a36;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 30px;
+    gap: 20px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: right 0.3s;
+  }
+  nav ul.open {
+    right: 0;
+  }
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top:
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="dark-theme">
+    <header>
+      <nav>
+        <div class="logo">My Portfolio</div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    
+  </ul>
+      </nav>
+    </header>
+
+    <section id="contact">
+      <h2 id="contactTitle">Contact Me</h2>
+      <div class="contact-form">
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xeoabvyo"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+ <div class="skills-details" >
+    <h3>Contact </h3>
+    <p>
+      Email:
+      <a 
+      href="mailto:pavanrapaka74@gmail.com"
+      style="color: #f8f8f2; text-decoration: none;">
+      pavanrapaka74@gmail.com</a>
+    </p>
+    <p>Phone: (+91)8106950531</p>
+    
+  </div>
+      <div id="thankYouMessage" style="display: none">
+        <h3>Thank you for contacting!</h3>
+        <p>I'll get back to you soon.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/pavan-shekar-18p19s99" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Pavan-Rapaka" target="_blank"><i class="fab fa-github"></i></a>
+        
+      </div>
+      <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const form = document.querySelector("#contactForm"); // Select the form using its ID
+
+      form.addEventListener("submit", (event) => {
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Get the form data
+        const formData = new FormData(form);
+        const object = {};
+        formData.forEach(function (value, key) {
+          object[key] = value;
+        });
+        const json = JSON.stringify(object);
+
+        // Send the form data to Formspree
+        fetch("https://formspree.io/f/xeoabvyo", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: json,
+        })
+          .then((response) => {
+            // Display thank you message
+            document.querySelector(".contact-form").style.display = "none";
+            document.getElementById("thankYouMessage").style.display = "block";
+            document.getElementById("contactTitle").style.display = "none"; // Hide the Contact Me heading
+          })
+          .catch((error) => console.log(error));
+      });
+
+      function showThankYou() {
+        document.getElementById("contactForm").style.display = "none";
+        document.getElementById("thankYouMessage").style.display = "block";
+      }
+    </script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
